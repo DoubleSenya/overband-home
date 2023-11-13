@@ -649,7 +649,7 @@
     flex-shrink: 0;
     opacity: 0.5;
     margin-top: 91px;
-    transition: all 0.5s;
+    transition: all 0.2s;
     display: flex;
 }
 
