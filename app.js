@@ -21,8 +21,15 @@ const swiper = new Swiper('.projects-slider', {
     initialSlide: 0,
 
     breakpoints: {
-        817: {
+        1101: {
             slidesPerView: 2,
         }
     },
+});
+
+var headerLogo;
+window.addEventListener('load', (event) => {
+    
+    headerLogo = document.getElementById('headerLogo');
+    
 });
