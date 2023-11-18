@@ -27,9 +27,20 @@ const swiper = new Swiper('.projects-slider', {
     },
 });
 
-var headerLogo;
 window.addEventListener('load', (event) => {
     
-    headerLogo = document.getElementById('headerLogo');
+    var mobileMenu = document.getElementById('mobileMenu')
+    var body = document.getElementById('body')
+
+    document.getElementById('mobileMenuOpenBtn').addEventListener('click', (e) => {
+        
+        mobileMenu.classList.add('mobile-menu__active')
+        body.classList.add('no-scroll')
+    })
+
+    document.getElementById('mobileMenuCloseBtn').addEventListener('click', (e) => {
+        mobileMenu.classList.remove('mobile-menu__active')
+        body.classList.remove('no-scroll')
+    })
     
 });

@@ -12,11 +12,29 @@
         <link href="style.css" rel="stylesheet"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body class="body">
+    <body class="body" id="body">
+
+        <!-- MOBILE MENU -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="close-menu" id="mobileMenuCloseBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="23" viewBox="0 0 24 23" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.16143 0.74697C2.57565 0.161181 1.6259 0.161267 1.04016 0.747013C0.454455 1.3328 0.454455 2.28263 1.04024 2.86842L9.87947 11.7066L1.74722 19.8389C1.16148 20.4246 1.16143 21.3744 1.74722 21.9602C2.33301 22.546 3.2828 22.5459 3.86854 21.9602L12.001 13.8278L20.1333 21.9591C20.7191 22.5449 21.6689 22.5448 22.2546 21.959C22.8405 21.3731 22.8405 20.4233 22.2544 19.8378L14.1223 11.7064L22.9604 2.86829C23.5463 2.28237 23.5462 1.33276 22.9604 0.74697C22.3746 0.161181 21.425 0.161052 20.8391 0.74697L12.0006 9.58546L3.16143 0.74697Z" fill="#D9D9D9"/>
+                </svg>
+            </div>
+            <nav class="nav_menu__mobile">
+                <a href="" class="nav-link__mobile" href="">О НАС</a>
+                <a href="" class="nav-link__mobile" href="">ПРОЕКТЫ</a>
+                <a href="" class="nav-link__mobile" href="">КОНТАКТЫ</a>
+                <a href="" class="nav-link__mobile" href="">РЕШЕНИЕ ДЛЯ ВАС</a>
+            </nav>
+        </div>
+        <!--  -->
 
         <!-- HEADER -->
         <header class="header">
-            <div class="header-left" id="headerLogo">OVERBAND</div>
+            <div class="header-left">
+                <div class="header-logo">OVERBAND</div>
+            </div>
             <div class="header-right">
                 <nav class="nav-menu">
                     <a class="nav-link" href="">О НАС</a>
@@ -26,7 +44,7 @@
                 </nav>
             </div>
             <div class="header-right__mobile">
-                <button class="burger-menu">
+                <button class="burger-menu" id="mobileMenuOpenBtn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="15" viewBox="0 0 30 15" fill="none">
                         <rect width="30" height="3" rx="1.5" fill="#D9D9D9"/>
                         <rect y="6" width="30" height="3" rx="1.5" fill="#D9D9D9"/>
