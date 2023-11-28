@@ -42,5 +42,20 @@ window.addEventListener('load', (event) => {
         mobileMenu.classList.remove('mobile-menu__active')
         body.classList.remove('no-scroll')
     })
+
+
+    document.getElementById('orderFormButton').addEventListener('click', (e) => {
+
+        let form = document.getElementById('orderForm')
+
+        let formData = new FormData(form)
+
+        fetch("http://overband-bot.com/form.php", { method: "POST", body: formData })
+            .then((response) => {
+                console.log(response.text())
+            }).catch((error) => {
+            
+        });
+    })
     
 });
