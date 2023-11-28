@@ -46,13 +46,22 @@ window.addEventListener('load', (event) => {
 
     document.getElementById('orderFormButton').addEventListener('click', (e) => {
 
+        e.preventDefault();
+
         let form = document.getElementById('orderForm')
 
         let formData = new FormData(form)
 
-        fetch("http://overband-bot.com/form.php", { method: "POST", body: formData })
+        fetch("http://overband-bot.com/form.php", { 
+            method: "POST", 
+            body: formData,
+            mode: 'cors',
+            headers: {
+                'Access-Control-Allow-Origin':'*'
+            },
+        })
             .then((response) => {
-                console.log(response.text())
+                console.log(response.json())
             }).catch((error) => {
             
         });
