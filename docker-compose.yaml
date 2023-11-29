@@ -1,0 +1,73 @@
+version: '3.3'
+
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: docker/Nginx.Dockerfile
+    container_name: overband-webserver
+    ports:
+      - 8080:80
+    networks:
+      - internet
+      - appnet
+    volumes:
+      - ./:/var/www/overband
+    restart: unless-stopped
+
+  app:
+    build:
+      context: .
+      dockerfile: docker/App.Dockerfile
+    container_name: overband-app
+    environment:
+      XDEBUG_MODE: debug
+      XDEBUG_CONFIG: client_host=host.docker.internal client_port=9003
+    volumes:
+      - ./:/var/www/overband
+    networks:
+      - appnet
+    depends_on:
+      - nginx
+      - db
+    restart: unless-stopped
+
+  db:
+    image: mysql:8.0.33
+    container_name: overband-db
+    ports:
+      - 33061:3306
+    volumes:
+      - db:/var/lib/mysql
+    networks:
+      - appnet
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=overband_bot
+    restart: unless-stopped
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:5.2.1
+    container_name: overband-phpmyadmin
+    ports:
+      - 8081:80
+    networks:
+      - appnet
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=db
+      - PMA_PORT=3306
+    depends_on:
+      - db
+    restart: unless-stopped
+
+networks:
+  internet:
+    name: internet
+    driver: bridge
+  appnet:
+    name: appnet
+    driver: bridge
+
+volumes:
+  db:

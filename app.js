@@ -52,13 +52,9 @@ window.addEventListener('load', (event) => {
 
         let formData = new FormData(form)
 
-        fetch("http://overband-bot.com/form.php", { 
+        fetch("/form.php", { 
             method: "POST", 
             body: formData,
-            mode: 'cors',
-            headers: {
-                'Access-Control-Allow-Origin':'*'
-            },
         })
             .then((response) => {
                 console.log(response.json())
