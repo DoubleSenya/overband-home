@@ -5,7 +5,7 @@ return [
         'token' => '6523816211:AAE67CQMDN8z7t42who_tF_5kFH4FDz9f1M',
 
         'webhook' => [
-            'url' => 'http://overband-bot.com/',
+            'url' => 'https://overband.ru/telegram.php',
         ],
     ],
 

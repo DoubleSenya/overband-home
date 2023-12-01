@@ -28,7 +28,9 @@ class TelegramBotApi implements BotApi
     public function setWebhook()
     {
         $url = config('telegram.webhook.url');
-        $this->api->setWebhook($url);
+        $this->api->setWebhook([
+            'url' => $url,
+        ]);
     }
 
     public function getWebhookUpdates()

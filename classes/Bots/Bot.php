@@ -16,35 +16,20 @@ abstract class Bot implements BotContract
     {
         $api = $this->buildApi();
 
-//    if(!$api->isSetWebhook()){
-//        $api->setWebhook();
-//        exit('Хук установлен');
-//    }
-//
-//    $updates = $api->getWebhookUpdates();
+        if(!$api->isSetWebhook()){
+            $api->setWebhook();
+            exit('Хук установлен');
+        }
 
-        $lastUpdateId = 0;
-        $clear = $api->getUpdates();
+        $updates = $api->getWebhookUpdates();
 
-        if (!empty($clear))
-            $lastUpdateId = array_pop($clear)->getId();
+        foreach ($updates as $update)
+        {
+            $dto = $this->buildDto($update);
 
-        do {
-            sleep(1);
-
-            $updates = $api->getUpdates($lastUpdateId + 1);
-
-            foreach ($updates as $update)
-            {
-                $dto = $this->buildDto($update);
-
-                $scenario = $this->buildScenario($dto, $api);
-                $scenario->go();
-            }
-
-            if (!empty($updates))
-                $lastUpdateId = array_pop($updates)->getId();
-        } while(true);
+            $scenario = $this->buildScenario($dto, $api);
+            $scenario->go();
+        }
     }
 
     abstract protected function buildApi();
