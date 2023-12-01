@@ -3,7 +3,7 @@ build:
 up:
 	docker-compose up -d
 run:
-	docker-compose exec app /tmp/up.sh
+	docker-compose exec app bash /tmp/up.sh
 app-bash:
 	docker-compose exec app bash
 down:

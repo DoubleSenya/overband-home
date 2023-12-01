@@ -7,7 +7,7 @@ services:
       dockerfile: docker/Nginx.Dockerfile
     container_name: overband-webserver
     ports:
-      - 8080:80
+      - 80:80
     networks:
       - internet
       - appnet

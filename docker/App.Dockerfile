@@ -23,12 +23,12 @@ ADD . /var/www
 RUN chown -R www-data:www-data /var/www
 # RUN chmod -R 755 /var/www/storage
 
-COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 ENV COMPOSER_ALLOW_SUPERUSER 1
 
 EXPOSE 9000
 
-COPY ./docker/up.sh /tmp
+COPY ./docker/up.sh /tmp/up.sh
 RUN chmod -R 755 /tmp/up.sh
 
 CMD ["php-fpm"]
