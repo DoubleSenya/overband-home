@@ -16,24 +16,25 @@
 }
 
 .mobile-menu {
-    display: none;
+    display: flex;
     position: fixed;
     align-items: center;
     justify-content: center;
     z-index: 4;
     top: 0;
-    bottom: 0;
     right: 0;
     left: 0;
+    bottom: 100%;
     background-color: #191919;
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transition: all 0.5s ease;
+    visibility: hidden;
 }
 
 .mobile-menu__active {
     opacity: 1;
-    display: flex;
-    transition: opacity 0.5s ease;
+    visibility: visible;
+    bottom: 0;
 }
 
 .nav_menu__mobile {
