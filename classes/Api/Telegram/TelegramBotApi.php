@@ -35,9 +35,15 @@ class TelegramBotApi implements BotApi
 
     public function getWebhookUpdates()
     {
-        $update = $this->api->getWebhookUpdate();
+        $updates = $this->api->getWebhookUpdate();
 
-        return new TelegramUpdate($update);
+        $tgUpdates = [];
+        foreach($updates as $update)
+        {
+            $tgUpdates[] = new TelegramUpdate($update);
+        }
+
+        return $tgUpdates;
     }
 
     public function getUpdates($offset = 0)
