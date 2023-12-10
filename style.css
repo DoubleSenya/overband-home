@@ -21,7 +21,11 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus, 
 input:-webkit-autofill:active{
     -webkit-box-shadow: 0 0 0 30px #191919 inset !important;
-    color: white;
+    -webkit-text-fill-color: #ffffff;
+}
+
+a {
+    text-decoration: none;
 }
 
 .body {
@@ -39,6 +43,40 @@ input:-webkit-autofill:active{
     position: absolute;
     right: 20px;
     top: 50px;
+}
+
+.form-modal {
+    display: flex;
+    position: fixed;
+    bottom: 50px;
+    right: 100px;
+    width: 288px;
+    height: 64px;
+    border-radius: 7px;
+    font-size: 14px;
+    color: white;
+    font-weight: 400;
+    align-items: center;
+    justify-content: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    visibility: hidden;
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.form-success-modal {
+    background-color: #7AB72E;
+}
+
+.form-error-modal {
+    background-color: #A72828;
+}
+
+.form-modal-active {
+    visibility: visible;
+    opacity: 1;
+    /* transition: all 0.5s ease; */
 }
 
 .mobile-menu {
@@ -454,9 +492,13 @@ input:-webkit-autofill:active{
     border: 0;
     transition: all 0.5s ease;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }
 
-.btn-telegram:hover, .btn-telegram__mobile:hover {
+.btn-telegram:hover {
     background: #191919;
     color: #E24343;
     border: 1px solid #E24343;
@@ -467,6 +509,9 @@ input:-webkit-autofill:active{
     display: none;
     transition: all 0.5s ease;
     cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    border: none;
 }
 
 .block-solution {
@@ -513,7 +558,7 @@ input:-webkit-autofill:active{
 }
 
 .form-input {
-    color: #5A5A5A;
+    color: #ffffff !important;
     /* Text */
     font-family: Roboto;
     font-size: 16px;
@@ -530,9 +575,23 @@ input:-webkit-autofill:active{
     margin-bottom: 20px;
 }
 
+.form-input::placeholder {
+    color: #5A5A5A;
+    opacity: 1; /* Firefox */
+}
+  
+.form-input::-ms-input-placeholder { /* Edge 12 -18 */
+    color: #5A5A5A;
+}
+
 .form-input:focus {
     outline: none;
+    color: #ffffff;
     border-bottom: 1px solid #c0c0c0;
+}
+
+.form-input:hover {
+    color: #ffffff;
 }
 
 .form-input:focus ~ .after-el {
@@ -554,6 +613,7 @@ input:-webkit-autofill:active{
     float: right;
     margin-top: 23px;
     cursor: pointer;
+    height: 35px;
 }
 
 .btn-form:hover {
@@ -650,6 +710,7 @@ input:-webkit-autofill:active{
 .contacts {
     display: inline-block;
     float: right;
+    text-decoration: none;
 }
 
 .company {
@@ -1350,7 +1411,7 @@ input:-webkit-autofill:active{
     }
     
     .form-input {
-        color: #5A5A5A;
+        color: #ffffff;
         /* Text */
         font-family: Roboto;
         font-size: 16px;
@@ -1385,7 +1446,7 @@ input:-webkit-autofill:active{
         outline: none;
         border: 0;
         float: right;
-        margin-top: 23px;
+        margin-top: 15px;
     }
     
     .solution-form {
@@ -1938,7 +1999,7 @@ input:-webkit-autofill:active{
     }
     
     .form-input {
-        color: #5A5A5A;
+        color: #ffffff;
         /* Text */
         font-family: Roboto;
         font-size: 16px;
@@ -1973,8 +2034,10 @@ input:-webkit-autofill:active{
         outline: none;
         border: 0;
         float: right;
-        margin-top: 23px;
+        margin-top: 15px;
     }
+
+    
     
     .solution-form {
         display: block;
@@ -2436,9 +2499,11 @@ input:-webkit-autofill:active{
     }
 
     .btn-telegram__mobile {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: left;
         float: left;
-        color: #191919;
+        
         font-family: Montserrat;
         font-size: 14px;
         font-style: normal;
@@ -2446,8 +2511,8 @@ input:-webkit-autofill:active{
         line-height: normal;
         text-transform: uppercase;
 
-        border-radius: 5px;
-        background: #E24343;
+        background-color: rgba(0, 0, 0, 0);
+        color: var(--red, #E24343);
 
         /* width: 287px; */
         height: 30px;
@@ -2495,7 +2560,7 @@ input:-webkit-autofill:active{
     }
     
     .form-input {
-        color: #5A5A5A;
+        color: #ffffff;
         /* Text */
         font-family: Roboto;
         font-size: 16px;
@@ -2518,7 +2583,6 @@ input:-webkit-autofill:active{
     }
     
     .btn-form {
-        color: var(--red, #E24343);
         /* Button */
         font-family: Montserrat;
         font-size: 16px;
@@ -2526,11 +2590,18 @@ input:-webkit-autofill:active{
         font-weight: 600;
         line-height: normal;
         
-        background-color: rgba(0, 0, 0, 0);
         outline: none;
         border: 0;
         float: right;
-        margin-top: 23px;
+        margin-top: 15px;
+
+        color: #191919;
+        border-radius: 5px;
+        background: #E24343;
+    }
+
+    .btn-form:hover {
+        color: #191919;
     }
     
     .solution-form {
@@ -3037,9 +3108,11 @@ input:-webkit-autofill:active{
     }
 
     .btn-telegram__mobile {
-        display: block;
+        display: flex;
+        align-items: center;
+        /* justify-content: center; */
         float: left;
-        color: #191919;
+        
         font-family: Montserrat;
         font-size: 14px;
         font-style: normal;
@@ -3047,8 +3120,8 @@ input:-webkit-autofill:active{
         line-height: normal;
         text-transform: uppercase;
 
-        border-radius: 5px;
-        background: #E24343;
+        background-color: rgba(0, 0, 0, 0);
+        color: var(--red, #E24343);
 
         /* width: 287px; */
         height: 30px;
@@ -3100,7 +3173,7 @@ input:-webkit-autofill:active{
     }
     
     .form-input {
-        color: #5A5A5A;
+        color: #ffffff;
         /* Text */
         font-family: Roboto;
         font-size: 16px;
@@ -3123,7 +3196,7 @@ input:-webkit-autofill:active{
     }
     
     .btn-form {
-        color: var(--red, #E24343);
+        
         /* Button */
         font-family: Montserrat;
         font-size: 16px;
@@ -3131,11 +3204,18 @@ input:-webkit-autofill:active{
         font-weight: 600;
         line-height: normal;
         
-        background-color: rgba(0, 0, 0, 0);
+        
         outline: none;
         border: 0;
         float: right;
-        margin-top: 23px;
+        margin-top: 15px;
+        color: #191919;
+        border-radius: 5px;
+        background: #E24343;
+    }
+
+    .btn-form:hover {
+        color: #191919;
     }
     
     .solution-form {
@@ -3382,6 +3462,12 @@ input:-webkit-autofill:active{
 }
 
 @media (max-width: 348px) {
+
+    .btn-telegram__mobile {
+        display: flex;
+        align-items: center;
+        /* justify-content: center; */
+    }
 
     .block-services {
         margin-top: 50px;

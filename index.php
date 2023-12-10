@@ -3,6 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <title>OVERBAND | Веб-студия</title>
+        <meta name="description" content="Добро пожаловать в нашу веб-студию, где мы создаем не просто веб-сайты, а мощные онлайн-платформы для вашего бизнеса. Мы специализируемся в веб-разработке, предоставляя выдающиеся результаты в создании современных и интуитивно понятных сайтов, а также веб-приложений, отвечающих потребностям вашего бизнеса. Наш опыт включает в себя индивидуальный подход к разработке бизнес-сайтов, корпоративных веб-решений, оптимизации для поисковых систем, созданию электронной коммерции, мобильных приложений и лендингов, призванных привлекать внимание и конвертировать посетителей в клиентов. Мы гордимся тем, что наши проекты сочетают в себе креативность, технологическую экспертизу и внимание к деталям, чтобы помочь вашему бизнесу процветать в онлайн-пространстве.">
+        <meta name="keywords" content="веб-разработка, cоздание сайтов, веб-дизайн, разработка веб-приложений, бизнес-сайты, корпоративные решения, оптимизация сайта, мобильные приложения для бизнеса, лендинги">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" content="index, follow">
         <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -15,7 +19,6 @@
             href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
         />
         <link href="style.css" rel="stylesheet"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body class="body" id="body">
 
@@ -27,10 +30,10 @@
                 </svg>
             </div>
             <nav class="nav_menu__mobile">
-                <a href="" class="nav-link__mobile" href="">О НАС</a>
-                <a href="" class="nav-link__mobile" href="">ПРОЕКТЫ</a>
-                <a href="" class="nav-link__mobile" href="">КОНТАКТЫ</a>
-                <a href="" class="nav-link__mobile" href="">РЕШЕНИЕ ДЛЯ ВАС</a>
+                <!-- <a href="#" class="nav-link__mobile" href="">О НАС</a> -->
+                <a href="#projectBlock" class="nav-link__mobile" href="">ПРОЕКТЫ</a>
+                <a href="#serviceBlock" class="nav-link__mobile" href="">УСЛУГИ</a>
+                <a href="#solutionBlock" class="nav-link__mobile" href="">РЕШЕНИЕ ДЛЯ ВАС</a>
             </nav>
         </div>
         <!--  -->
@@ -42,10 +45,10 @@
             </div>
             <div class="header-right">
                 <nav class="nav-menu">
-                    <a class="nav-link" href="">О НАС</a>
-                    <a class="nav-link" href="">ПРОЕКТЫ</a>
-                    <a class="nav-link" href="">КОНТАКТЫ</a>
-                    <a class="nav-link nav-link__big" href="">РЕШЕНИЕ ДЛЯ ВАС</a>
+                    <!-- <a class="nav-link" href="">О НАС</a> -->
+                    <a class="nav-link" href="#projectBlock">ПРОЕКТЫ</a>
+                    <a class="nav-link" href="#serviceBlock">УСЛУГИ</a>
+                    <a class="nav-link nav-link__big" href="#solutionBlock">РЕШЕНИЕ ДЛЯ ВАС</a>
                 </nav>
             </div>
             <div class="header-right__mobile">
@@ -80,9 +83,9 @@
                     <path d="M38.3553 41.8553C40.2883 41.8553 41.8553 40.2883 41.8553 38.3553L41.8553 6.85534C41.8553 4.92234 40.2883 3.35534 38.3553 3.35534C36.4223 3.35534 34.8553 4.92234 34.8553 6.85534L34.8553 34.8553L6.85534 34.8553C4.92234 34.8553 3.35534 36.4223 3.35534 38.3553C3.35534 40.2883 4.92234 41.8553 6.85534 41.8553L38.3553 41.8553ZM0.525126 5.47487L35.8805 40.8302L40.8302 35.8805L5.47487 0.525126L0.525126 5.47487Z" fill="#E24343"/>
                 </svg>
             </div>
-            <div class="block-head">
+            <div class="block-head" id="projectBlock">
                 <h2 class="block-heading">ПРОЕКТЫ</h2>
-                <a href="" class="block-details">ПОДРОБНОСТИ</a>
+                <!-- <a href="" class="block-details">ПОДРОБНОСТИ</a> -->
             </div>
 
             <div class="block-description">
@@ -181,7 +184,7 @@
             </div>
         </div>
 
-        <div class="block block-services">
+        <div class="block block-services" id="serviceBlock">
             <div class="block-head block-head__p">
                 <h2 class="block-heading__other">НАШИ УСЛУГИ</h2>
                 <div class="arrow-services__mobile">
@@ -242,7 +245,7 @@
             </div>
         </div>
 
-        <div class="block block-solution">
+        <div class="block block-solution" id="solutionBlock">
             <div class="block-head head-rel">
                 <h2 class="block-heading">РЕШЕНИЕ ДЛЯ ВАС</h2>
                 <div class="arrow arrow-solution">
@@ -262,7 +265,7 @@
                     <div class="block-description__solution">
                         Вы можете оставить заявку, заполнив форму или связавшись с нами через телеграм   
                     </div>
-                    <button class="btn-telegram">Telegram</button>
+                    <a class="btn-telegram" href="https://t.me/overband_bot" target="_blank">Telegram</a>
                 </div>
                 <div class="form-container right-solution">
                     <form action="" class="solution-form" id="orderForm">
@@ -290,7 +293,7 @@
                                 </svg>
                             </div>
                         </div>
-                        <button class="btn-telegram__mobile">Telegram</button>
+                        <a class="btn-telegram__mobile" href="https://t.me/overband_bot" target="_blank">Telegram</a>
                         <button class="btn-form" id="orderFormButton">ОТПРАВИТЬ</button>
                     </form>
                 </div>
@@ -305,9 +308,9 @@
             <div class="footer-section">
                 <div class="footer-section_heading">Адрес</div>
                 <div class="footer-section_text">г. Новосибирск</div>
-                <div class="footer-section_text">overband@gmail.com</div>
+                <!-- <div class="footer-section_text">overband@gmail.com</div> -->
             </div>
-            <div class="footer-section">
+            <!-- <div class="footer-section">
                 <div class="footer-section_heading">О нас</div>
                 <div class="footer-section_text">Контакты</div>
                 <div class="footer-section_text">Помощь</div>
@@ -315,17 +318,27 @@
             <div class="footer-section">
                 <div class="footer-section_heading">Гарантии</div>
                 <div class="footer-section_text">Политика конфиденциальности</div>
-            </div>
+            </div> -->
 
             <div class="footer-info">
                 <div class="company">2023 OVERBAND</div>
                 <div class="contacts">
-                    <div class="contact">Телеграм</div>
-                    <div class="contact">ВКонтакте</div>
-                    <div class="contact">Инстаграм</div>
+                    <a class="contact" href="https://t.me/overband_bot" target="_blank">Телеграм</a>
+                    <!-- <div class="contact">ВКонтакте</div>
+                    <div class="contact">Инстаграм</div> -->
                 </div>
             </div>
         </footer>
+
+        <div class="form-modal form-success-modal" id="successModal">
+            Заявка успешно отправлена! 
+            Ожидайте звонка
+        </div>
+
+        <div class="form-modal form-error-modal" id="errorModal">
+            Что-то пошло не так.. 
+            Повторите попытку
+        </div>
     </body>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

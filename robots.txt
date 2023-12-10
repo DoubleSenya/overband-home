@@ -1,0 +1,9 @@
+Sitemap: https://overband.ru/sitemap.xml
+User-agent: Googlebot
+Allow: https://overband.ru/
+
+User-agent: YandexBot
+Allow: https://overband.ru/
+
+User-agent: Bingbot
+Allow: https://overband.ru/

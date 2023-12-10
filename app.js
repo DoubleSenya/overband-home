@@ -43,6 +43,14 @@ window.addEventListener('load', (event) => {
         body.classList.remove('no-scroll')
     })
 
+    var elements = document.querySelectorAll(".nav-link__mobile")
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].addEventListener('click', (e) => {
+            mobileMenu.classList.remove('mobile-menu__active')
+            body.classList.remove('no-scroll')
+        })
+    }
+
 
     document.getElementById('orderFormButton').addEventListener('click', (e) => {
 
@@ -57,10 +65,20 @@ window.addEventListener('load', (event) => {
             body: formData,
         })
             .then((response) => {
-                // console.log(response.json())
                 form.reset();
+
+                document.getElementById('successModal').classList.add('form-modal-active');
+
+                setTimeout(() =>{
+                    document.getElementById('successModal').classList.remove('form-modal-active')
+                }, 2500)
+
             }).catch((error) => {
-            
+                document.getElementById('errorModal').classList.add('form-modal-active');
+
+                setTimeout(() =>{
+                    document.getElementById('errorModal').classList.remove('form-modal-active')
+                }, 2500)
         });
     })
     
