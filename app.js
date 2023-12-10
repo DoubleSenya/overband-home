@@ -57,7 +57,8 @@ window.addEventListener('load', (event) => {
             body: formData,
         })
             .then((response) => {
-                console.log(response.json())
+                // console.log(response.json())
+                form.reset();
             }).catch((error) => {
             
         });

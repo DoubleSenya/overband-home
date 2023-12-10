@@ -1,3 +1,29 @@
+@font-face {
+    font-weight: 400; /* Соответствует значению normal */
+    font-family: Roboto;
+    src: url("../fonts/Roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-weight: 400; /* Соответствует значению normal */
+    font-family: Montserrat;
+    src: url("../fonts/Montserrat/Montserrat-Regular.ttf");
+}
+
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+/* Change the white to any color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #191919 inset !important;
+    color: white;
+}
+
 .body {
     background-color: #191919;
     margin: 0;
