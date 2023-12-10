@@ -67,10 +67,10 @@
             <div class="left">
                 <div class="logo over">OVER</div>
                 <div class="description">
-                    Наша веб-студия предлагает профессиональные услуги в сфере разработки и дизайна веб-сайтов. Мы создаем современные, функциональные и привлекательные сайты, которые помогут вам привлечь больше посетителей и достичь ваших бизнес-целей.
+                    Создаем сайты, веб-приложения, стартапы для вашего бизнеса
                 </div>
 
-                <div class="line"></div>
+                <!-- <div class="line"></div> -->
             </div>
             <div class="right">
                 <div class="logo band">BAND</div>
@@ -90,13 +90,13 @@
 
             <div class="block-description">
                 <div class="block-description__text">
-                    Мы представляем наши недавние проекты, чтобы демонстрировать наши навыки и опыт в области веб-разработки. Здесь вы найдете примеры наших работ по созданию сайтов, включая детальное описание каждого проекта, используемые технологии и достигнутые результаты. Этот раздел поможет вам лучше понять наш подход к работе и убедиться в высоком качестве нашего сервиса.
+                    Предлагаем ознакомиться с нашими недавними проектами
                 </div>
-                <div class="arrow-projects">
+                <!-- <div class="arrow-projects">
                     <svg xmlns="http://www.w3.org/2000/svg" width="59" height="59" viewBox="0 0 59 59" fill="none">
                         <path d="M0.507023 53.5003C0.506657 56.2623 2.74447 58.5016 5.50533 58.502L50.4961 58.508C53.257 58.5084 55.4954 56.2697 55.4958 53.5077C55.4961 50.7457 53.2583 48.5064 50.4975 48.506L10.5057 48.5006L10.511 8.49241C10.5114 5.73042 8.27359 3.49108 5.51273 3.49071C2.75187 3.49034 0.513453 5.72907 0.513082 8.49106L0.507023 53.5003ZM51.4657 0.463266L1.97167 49.9642L9.04034 57.0377L58.5343 7.53673L51.4657 0.463266Z" fill="#E24343"/>
                     </svg>
-                </div>
+                </div> -->
             </div>
 
             <div class="block-content">
@@ -104,7 +104,7 @@
                     <div class="projects-wrapper">
                         <div class="project">
                             <div class="project-background corrida">
-                                Corrida Invest
+                                <img src="/images/projects/corrida.png" alt="" class="project-logo" width="60%" height="55%">
                                 <div class="project-categories">
                                     <div class="category">Приложение</div>
                                     <div class="category">2023</div>
@@ -112,12 +112,12 @@
                             </div>
                             <div class="project-info">
                                 <div class="project-title">Corrida Invest</div>
-                                <div class="project-description">Investment project at Binance API. Gghl kdmvsdl kmvlks dmvlkms dlkvm sdlkmvlk ksmlsdk mflkdsmf mkd smfsdlm flksdm flk kmkmk</div>
+                                <div class="project-description">Инвестиционный проект</div>
                             </div>
                         </div>
                         <div class="project">
                             <div class="project-background wishapp">
-                                Wish App
+                                <img src="/images/projects/wishapp2.png" alt="" class="project-logo" width="80%" height="10%">
                                 <div class="project-categories">
                                     <div class="category">Приложение</div>
                                     <div class="category">2023</div>
@@ -125,12 +125,12 @@
                             </div>
                             <div class="project-info">
                                 <div class="project-title">Wish App</div>
-                                <div class="project-description">Event search app</div>
+                                <div class="project-description">Мобильное приложение для поиска мероприятий и организации встреч</div>
                             </div>
                         </div>
-                        <div class="project">
+                        <!-- <div class="project">
                             <div class="project-background zaselite">
-                                Zaselite
+                                <img src="/images/projects/zaselite.png" alt="" class="project-logo" width="80%" height="10%">
                                 <div class="project-categories">
                                     <div class="category">Приложение</div>
                                     <div class="category">2023</div>
@@ -138,7 +138,7 @@
                             </div>
                             <div class="project-info">
                                 <div class="project-title">Zaselite</div>
-                                <div class="project-description">Arenda jilya</div>
+                                <div class="project-description">Агрегатор объявлений аренды недвижимости</div>
                             </div>
                         </div>
                         <div class="project">
@@ -151,20 +151,20 @@
                             </div>
                             <div class="project-info">
                                 <div class="project-title">Avmnogo</div>
-                                <div class="project-description">Car diler</div>
+                                <div class="project-description">CRM-система для автодилеров</div>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="project">
                             <div class="project-background lomaday">
-                                Lomaday
+                                <img src="/images/projects/lomaday.png" alt="" class="project-logo" width="85%" height="30%">
                                 <div class="project-categories">
-                                    <div class="category">Приложение</div>
-                                    <div class="category">2023</div>
+                                    <div class="category lamoday-category">Приложение</div>
+                                    <div class="category lamoday-category">2023</div>
                                 </div>
                             </div>
                             <div class="project-info">
                                 <div class="project-title">Lomaday</div>
-                                <div class="project-description">Repair service</div>
+                                <div class="project-description">Сайт сервисного центра по ремонту техники</div>
                             </div>
                         </div>
                     </div>
@@ -201,7 +201,7 @@
                     </svg>
                 </div>
                 <div class="block-description__text">
-                    Мы предлагаем профессиональные услуги в сфере разработки и дизайна веб-сайтов. Наша веб-студия специализируется на создании современных, функциональных и привлекательных сайтов, которые помогут вам достичь ваших бизнес-целей и привлечь больше посетителей.
+                    Наша студия предлагает комплекс услуг для достижения лучших результатов
                 </div>
                 <!-- <div class="arrow"></div> -->
             </div>
@@ -305,11 +305,11 @@
                 <span class="logo-footer_over">OVER</span><span class="logo-footer_band">BAND</span>
             </div>
 
-            <div class="footer-section">
+            <!-- <div class="footer-section">
                 <div class="footer-section_heading">Адрес</div>
                 <div class="footer-section_text">г. Новосибирск</div>
-                <!-- <div class="footer-section_text">overband@gmail.com</div> -->
-            </div>
+                <div class="footer-section_text">overband@gmail.com</div>
+            </div> -->
             <!-- <div class="footer-section">
                 <div class="footer-section_heading">О нас</div>
                 <div class="footer-section_text">Контакты</div>

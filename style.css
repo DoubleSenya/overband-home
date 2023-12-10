@@ -215,7 +215,7 @@ a {
 }
 
 .block-home {
-    height: 868px;
+    height: 568px;
 }
 
 .left {
@@ -631,7 +631,7 @@ a {
     padding-left: 160px;
     padding-right: 160px;
     /* padding-top: 60px; */
-    height: 330px;
+    height: 250px;
     position: relative;
 }
 
@@ -791,7 +791,12 @@ a {
 }
 
 .lomaday {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(159deg, #FFF1DC 0.71%, #4A4A4A 227.66%);
+    /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(159deg, #FFF1DC 0.71%, #4A4A4A 227.66%); */
+    background-color: #f3f3f3;
+}
+
+.lamoday-category {
+    color: #040404 !important;
 }
 
 .project-background {
@@ -1096,7 +1101,7 @@ a {
     }
     
     .block-home {
-        height: 868px;
+        height: 568px;
     }
     
     .left {
@@ -1460,7 +1465,7 @@ a {
         padding-left: 90px;
         padding-right: 90px;
         /* padding-top: 60px; */
-        height: 330px;
+        height: 200px;
         position: relative;
     }
     
@@ -1749,7 +1754,7 @@ a {
     }
     
     .block-home {
-        height: 768px;
+        height: 568px;
         /* padding-left: 13px;
         padding-right: 13px; */
     }
@@ -2052,7 +2057,7 @@ a {
         padding-left: 50px;
         padding-right: 50px;
         /* padding-top: 60px; */
-        height: 377px;
+        height: 180px;
         overflow: hidden;
     }
     
@@ -2303,7 +2308,7 @@ a {
     }
     
     .block-home {
-        height: 768px;
+        height: 568px;
         /* padding-left: 13px;
         padding-right: 13px; */
     }
@@ -2617,7 +2622,7 @@ a {
         padding-left: 13px;
         padding-right: 13px;
         /* padding-top: 60px; */
-        height: 377px;
+        height: 180px;
         overflow: hidden;
     }
     
@@ -2915,7 +2920,7 @@ a {
     }
     
     .block-home {
-        height: 768px;
+        height: 568px;
         /* padding-left: 13px;
         padding-right: 13px; */
     }
@@ -3227,7 +3232,7 @@ a {
         padding-left: 13px;
         padding-right: 13px;
         /* padding-top: 60px; */
-        height: 377px;
+        height: 150px;
         overflow: hidden;
     }
     
@@ -3449,11 +3454,11 @@ a {
     }
 
     .footer-info {
-        height: 100px;
+        height: 50px;
     }
 
     .footer {
-        height: 477px;
+        height: 150px;
     }
     
     .solution-form {
