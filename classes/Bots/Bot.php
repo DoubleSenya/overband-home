@@ -21,15 +21,12 @@ abstract class Bot implements BotContract
             exit('Хук установлен');
         }
 
-        $updates = $api->getWebhookUpdates();
+        $update = $api->getWebhookUpdates();
 
-        foreach ($updates as $update)
-        {
-            $dto = $this->buildDto($update);
+        $dto = $this->buildDto($update);
 
-            $scenario = $this->buildScenario($dto, $api);
-            $scenario->go();
-        }
+        $scenario = $this->buildScenario($dto, $api);
+        $scenario->go();
     }
 
     abstract protected function buildApi();
